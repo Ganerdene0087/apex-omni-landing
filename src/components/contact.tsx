@@ -17,7 +17,7 @@ const Contact = () => {
             <img
               src={AppImage}
               alt="App preview"
-              className="object-cover w-full h-full"
+              className="object-fit w-full h-full"
             />
           </div>
         </div>
@@ -30,10 +30,30 @@ const Contact = () => {
               shape="round"
               size="large"
               options={[
-                { value: "ios", icon: <AppleOutlined /> },
-                { value: "android", icon: <AndroidOutlined /> },
+                {
+                  value: "ios",
+                  icon: (
+                    <AppleOutlined
+                      style={
+                        os === "ios" ? { color: "black" } : { color: "white" }
+                      }
+                    />
+                  ),
+                },
+                {
+                  value: "android",
+                  icon: (
+                    <AndroidOutlined
+                      style={
+                        os === "android"
+                          ? { color: "black" }
+                          : { color: "white" }
+                      }
+                    />
+                  ),
+                },
               ]}
-              style={{ backgroundColor: "rgba(15, 23, 42, 0.9)" }}
+              style={{ backgroundColor: "rgba(15, 23, 42, 0.8)" }}
             />
           </div>
 
@@ -44,15 +64,25 @@ const Contact = () => {
           </h1>
 
           {os === "ios" ? (
-            <div className="flex cursor-pointer items-center justify-center bg-slate-900/90 text-white px-6 py-3 rounded-full shadow-lg hover:opacity-50 transition text-lg font-semibold">
+            <a
+              href="https://apps.apple.com/mn/app/apex-traders/id6651839784"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex cursor-pointer items-center justify-center bg-slate-900/90 text-white px-6 py-3 rounded-full shadow-lg hover:opacity-50 transition text-lg font-semibold"
+            >
               <span>Download on the App Store</span>
               <MoveUpRight />
-            </div>
+            </a>
           ) : (
-            <div className="flex cursor-pointer items-center justify-center bg-slate-900/90 text-white px-6 py-3 rounded-full shadow-lg hover:opacity-50 transition text-lg font-semibold">
+            <a
+              href="https://play.google.com/store/apps/details?id=mn.apex.caspo&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex cursor-pointer items-center justify-center bg-slate-900/90 text-white px-6 py-3 rounded-full shadow-lg hover:opacity-50 transition text-lg font-semibold"
+            >
               <span>Download on the Google Play</span>
               <MoveUpRight />
-            </div>
+            </a>
           )}
         </div>
       </div>
