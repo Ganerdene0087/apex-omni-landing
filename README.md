@@ -57,16 +57,16 @@ npm run preview
 
 ### Page1
 
-![Home Page](screenshots/home1.png)
+![Page1](screenshot/home1.png)
 
 ### Page2
 
-![Home Page](screenshots/home2.png)
+![Page2](screenshot/home2.png)
 
 ### Page3
 
-![Home Page](screenshots/info1.png)
+![Page3](screenshot/info1.png)
 
 ### Page4
 
-![Home Page](screenshots/invest1.png)
+![Page4](screenshot/invest1.png)
